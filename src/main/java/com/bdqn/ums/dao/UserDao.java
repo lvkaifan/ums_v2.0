@@ -33,7 +33,7 @@ public interface UserDao {
 
 	/**
 	 * <b>根据用户id删除用户信息</b>
-	 * @param id
+	 * @param user
 	 * @return
 	 * @throws Exception
 	 */
