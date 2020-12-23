@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.bdqn</groupId>
+  <artifactId>ums_v2.0</artifactId>
+  <version>2.0.0</version>
+  <packaging>war</packaging>
+
+  <name>ums_v2.0 Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <spring.version>5.2.12.RELEASE</spring.version>
+    <mabatis.version>3.5.6</mabatis.version>
+    <mysql.version>8.0.22</mysql.version>
+    <mybatisspring.version>2.0.6</mybatisspring.version>
+    <druid.version>1.2.4</druid.version>
+    <jackson.version>2.12.0</jackson.version>
+  </properties>
+
+  <dependencies>
+    <!--配置 Spring web MVC 依赖关系[BEGIN]-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!--配置 Spring web MVC 依赖关系[END]-->
+
+    <!--配置　Spring JDBC 依赖关系[BEGIN]-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!--配置　Spring JDBC 依赖关系[END]-->
+
+    <!--配置 Mysql connector java 依赖关系[BEGIN]-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+    </dependency>
+
+    <!--配置 Mysql connector java 依赖关系[END]-->
+
+    <!--配置 Mybatis 依赖关系[BEGIN]-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${mabatis.version}</version>
+    </dependency>
+    <!--配置 Mybatis 依赖关系[END]-->
+
+    <!--配置 Mybatis 和 Spring 结合的依赖关系[BEGIN]-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>${mybatisspring.version}</version>
+    </dependency>
+
+    <!--配置 Mybatis 和 Spring 结合的依赖关系[END]-->
+
+    <!--配置 Druid 数据库连接池的依赖关系[BEGIN]-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>${druid.version}</version>
+    </dependency>
+    <!--配置 Druid 数据库连接池的依赖关系[END]-->
+
+    <!--为了配合@responseBody 返回json 那么需要加载 jackson-databind [BEGIN]-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <!--为了配合@responseBody 返回json 那么需要加载 jackson-databind [END]-->
+
+    <!--配置 Servlet ,jsp,jstl 的相关依赖关系[BEGIN]-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <version>2.3.3</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <!--配置 Servlet ,jsp,jstl 的相关依赖关系[END]-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>ums_v2.0</finalName>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
